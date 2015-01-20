@@ -90,13 +90,20 @@ module.exports = {
 		var search = {};
 
 		if ( req.param("q") != undefined ) {
-			search = req.param("q");
-			console.log(search);
-		} else if ( req.param("letter") != undefined ) {
-			if ( req.param("letter") == "other" ) {
+			try {
+				search = JSON.parse(req.param("q"));
+			} catch ( error ) {
+				res.json({
+					'error' : "Invalid query!",
+					'code'  : 400
+				});
+				return;
+			} 
+		} else if ( req.param("start") != undefined ) {
+			if ( req.param("start") == "other" ) {
 				search = { name : new RegExp('^([0-9]).*') }
 			} else {
-				search = {$or : [{name: new RegExp('^'+ req.param("letter").toUpperCase())},{name: new RegExp('^' + req.param("letter").toLowerCase())}]};
+				search = {$or : [{name: new RegExp('^'+ req.param("start").toUpperCase())},{name: new RegExp('^' + req.param("start").toLowerCase())}]};
 			}
 		} else {
 			res.json({
@@ -105,7 +112,9 @@ module.exports = {
 			});
 		}
 
-		search["id"] = {$gt : req.param("after")};
+		if ( req.param("after") != undefined ) {
+			search["id"] = {$gt : req.param("after")}
+		}
 
 		var cursor = InstitutionModel.find(search);
 
