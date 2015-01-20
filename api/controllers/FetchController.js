@@ -40,8 +40,14 @@ module.exports = {
 			AllList.get(key, value);
 		} );
 
-		//AllList.get("1", "9");
+		res.send("Working on it!");
+	},
 
-		res.send("Done");
+	fetch_one : function ( req, res ) {
+		var params = req.params;
+
+		InstituteService.get(params.document_id);
+
+		res.send("Done!");
 	}
 }

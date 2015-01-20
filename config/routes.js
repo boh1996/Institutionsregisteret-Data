@@ -35,7 +35,15 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  'get /fetch/all_list' : 'FetchController.all_list'
+  'get /fetch/all_list' : 'FetchController.all_list',
+  'get r|^/fetch/([0-9a-fA-F]{32})|document_id' : 'FetchController.fetch_one',
+
+  'get /search' : 'RecieveController.search',
+  'get /find' : 'RecieveController.find',
+
+  'get r|^/([0-9a-fA-F]{24})$|object_id' : 'RecieveController.object_id',
+  'get r|^/([0-9a-fA-F]{32})$|document_id' : 'RecieveController.document_id',
+  'get r|^/([0-9]*)|institute_id' : 'RecieveController.institute_id'
 
   /***************************************************************************
   *                                                                          *

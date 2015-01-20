@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"doc",
+				"document_id"
+			],
+			[
+				"In",
+				"InstitutionModel"
+			],
+			[
+				"do",
+				"document_id"
+			],
+			[
+				"m",
+				"matches"
+			],
+			[
+				"Inst",
+				"InstituteService"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"ma",
+				"mapping"
+			],
+			[
 				"branch",
 				"branch_id"
 			],
@@ -388,10 +416,6 @@
 				"xprs_subject_id"
 			],
 			[
-				"doc",
-				"documentItems"
-			],
-			[
 				"exist",
 				"existingItems"
 			],
@@ -418,10 +442,6 @@
 			[
 				"ph",
 				"phase_id"
-			],
-			[
-				"do",
-				"documents"
 			],
 			[
 				"contex",
@@ -494,36 +514,24 @@
 			[
 				"cont",
 				"context_card"
-			],
-			[
-				"ele",
-				"elements"
-			],
-			[
-				"stude",
-				"studentGroups"
-			],
-			[
-				"contet",
-				"context_cards"
-			],
-			[
-				"teac",
-				"teacherGroups"
-			],
-			[
-				"teaMn",
-				"teamNameGroups"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "api/controllers/FetchController.js",
+			"settings":
+			{
+				"buffer_size": 621,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 45.0,
+		"height": 490.0,
 		"selected_items":
 		[
 			[
@@ -596,10 +604,24 @@
 	},
 	"expanded_folders":
 	[
-		"/R/Institutionsregisteret-Data"
+		"/R/Institutionsregisteret-Data",
+		"/R/Institutionsregisteret-Data/api",
+		"/R/Institutionsregisteret-Data/api/controllers",
+		"/R/Institutionsregisteret-Data/api/models",
+		"/R/Institutionsregisteret-Data/api/services",
+		"/R/Institutionsregisteret-Data/config"
 	],
 	"file_history":
 	[
+		"/R/Institutionsregisteret-Data/api/services/AllList.js",
+		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
+		"/R/Institutionsregisteret-Data/api/services/SyncService.js",
+		"/R/Institutionsregisteret-Data/tasks/config/sync.js",
+		"/R/Institutionsregisteret-Data/node_modules/grunt-sync/sync.json",
+		"/R/Institutionsregisteret-Data/config/session.js",
+		"/R/Institutionsregisteret-Data/package.json",
+		"/R/Institutionsregisteret-Data/config/routes.js",
+		"/R/Institutionsregisteret-Data/config/models.js",
 		"/R/Unical/config/routes.js",
 		"/R/Unical/api/controllers/LectioController.js",
 		"/R/Unical/views/layout.ejs",
@@ -718,16 +740,7 @@
 		"/R/LectioAPI/scrapers/subjects.py",
 		"/R/LectioAPI/importers/importSubjects.py",
 		"/R/LectioAPI/importers/importSubjectList.py",
-		"/R/LectioAPI/importers/importXPRSSubjects.py",
-		"/R/LectioAPI/importers/importXPRSSubject.py",
-		"/R/LectioAPI/scrapers/context_card.py",
-		"/R/LectioAPI/importers/importPrivateTimetable.py",
-		"/R/LectioAPI/importers/importActivityInfo.py",
-		"/R/LectioAPI/scrapers/values.py",
-		"/R/LectioAPI/importers/importRooms.py",
-		"/R/LectioAPI/importers/importRessources.py",
-		"/R/LectioAPI/scrapers/teachers.py",
-		"/R/LectioAPI/importers/importAssignments.py"
+		"/R/LectioAPI/importers/importXPRSSubjects.py"
 	],
 	"find":
 	{
@@ -757,6 +770,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{document_id : document_id}",
+			"document_id",
+			"document",
+			"cells[0].text.trim()",
+			"cells[0].trim()",
+			"cells[0].text.trim()",
 			"text()",
 			"%24",
 			"();\n",
@@ -878,13 +897,7 @@
 			"yearGroups",
 			"calculatedGroups",
 			"periodeGroups",
-			"calculatedGroups",
-			"periodeGroups",
-			"longPreperationGroups",
-			"dateTimeProg",
-			"originalSenderUser",
-			"lectioContextCard",
-			"message_id"
+			"calculatedGroups"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1026,8 +1039,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "api/controllers/FetchController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								613,
+								613
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1097,6 +1139,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"syn",
+				"api\\services\\SyncService.js"
+			],
 			[
 				"fun",
 				"scrapers\\functions.py"
@@ -1604,10 +1650,6 @@
 			[
 				"file_m",
 				"application/models/file_model.php"
-			],
-			[
-				"fil",
-				"application/libraries/file.php"
 			]
 		],
 		"width": 0.0
@@ -1635,7 +1677,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 342.0,
 	"status_bar_visible": true,
 	"template_settings":

@@ -23,7 +23,7 @@ module.exports = {
 				body = iconv.decode(new Buffer(body), "ISO-8859-1");
 				InstituteService.parse_data(body, document_id);
 			} else {
-				console.log("Error, while requesting!");
+				console.log("Error, while requesting!", response.statusCode, error, url);
 			}
 		});
 	},
@@ -34,7 +34,6 @@ module.exports = {
 		var mapping = {
 			"Institutionsnr." : "institute_id",
 			"Navn" : "name",
-			"Leder" : "leader",
 			"Adresse" : "address",
 			"Telefon" : "telephone",
 			"E-mail" : "email",
@@ -70,25 +69,36 @@ module.exports = {
 					matches = divideRegex.exec(value);
 				}
 
+				documentObject["location"] = {};
+
 				if ( matches != null ) {
-					documentObject["zip"] = matches.capture("first");
-					documentObject["city"] = matches.capture("second");
+					documentObject["location"]["zip"] = matches.capture("first");
+					documentObject["location"]["city"] = matches.capture("second");
 				}
 
-				documentObject["zip_city_text"] = value;
+				documentObject["location"]["zip_city_text"] = value;
 			} else if ( key == "Afdeling til" ) {
 				documentObject["parent"] = {};
-				documentObject["parent"]["institute_id"] = value.substring(0,value.indexOf(" ") - 1).trim();
+				documentObject["parent"]["institute_id"] = value.substring(0,value.indexOf(" ")).trim();
 				documentObject["parent"]["name"] = value.substring(value.indexOf(" "), value.length).trim();
 			} else if ( key == "Institutionstype" ) {
 				documentObject["institute_type"] = value;
+				SyncService.sync({"type" : value}, {"type" : value},InstitutionTypeModel);
+			} else if ( key == "Leder" ) {
+				var values = value.split(",");
+				var leader_object = {
+					"name" : values[0].trim()
+				};
 
-				// Add to type database
+				if ( values.length > 1 ) {
+					leader_object["position"] = values[1].trim();
+				}
+				documentObject["leader"] = leader_object;
 			} else if ( key.length > 0 ) {
 				documentObject[key] = value;
 			}
 		} );
 
-		SyncService.sync({document_id : document_id}, documentObject);
+		SyncService.sync({document_id : document_id}, documentObject, InstitutionModel);
 	}
 }
