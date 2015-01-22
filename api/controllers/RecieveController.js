@@ -67,17 +67,57 @@ module.exports = {
 		}
 
 		if ( req.param("q") != undefined ) {
-			var search = {};
+			var search = {$or : [] };
 
 			fields.forEach( function ( element, index ) {
-				search[element] = "/" + req.param("q") + "/";
+				var data = {};
+				data[element] = new RegExp("^(" + req.param("q") + ").*");
+				search["$or"].push(data);
 			} );
 
-			console.log(search);
+			var cursor = InstitutionModel.find(search);
 
-			/*InstitutionModel.find({ $or : search }).exec( function ( error, results ) {
-				console.log(results.length);
-			} );*/
+			var limit = 20;
+
+			if ( req.param("limit") != undefined & req.param("limit") <= 20 ) {
+				limit = req.param("limit");
+			}
+
+			cursor.limit(limit);
+
+			if ( req.param('offset') != undefined ) {
+				cursor.skip(req.param('offset'));
+			}
+
+			InstitutionModel.count(search).exec( function ( error, count ) {
+				if ( error != null ) {
+					res.json({
+						'error' : "No institutions found!",
+						'code'  : 404
+					});
+				} else {
+					cursor.exec( function ( error, results ) {
+						if ( results.length > 0 ) {
+							if ( error != null ) {
+								console.log(error);
+							}
+
+							res.json({
+								'results' 		: results,
+								'code' 	  		: 200,
+								'error'   		: null,
+								'result_count'  : results.length,
+								'record_count'  : count
+							});
+						} else {
+							res.json({
+								'error' : "No institutions found!",
+								'code'  : 404
+							});
+						}
+					} );
+				}
+			} );
 		} else {
 			res.json({
 				error : 'Error while searching, missing query parameters!',
@@ -118,9 +158,13 @@ module.exports = {
 
 		var cursor = InstitutionModel.find(search);
 
-		if ( req.param("limit") != undefined ) {
-			cursor.limit(req.param("limit"));
+		var limit = 20;
+
+		if ( req.param("limit") != undefined & req.param("limit") <= 20 ) {
+			limit = req.param("limit");
 		}
+
+		cursor.limit(limit);
 
 		if ( req.param('offset') != undefined ) {
 			cursor.skip(req.param('offset'));

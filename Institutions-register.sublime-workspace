@@ -4,8 +4,44 @@
 		"selected_items":
 		[
 			[
+				"ser",
+				"search"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"ee",
+				"element"
+			],
+			[
+				"in",
+				"institute_id"
+			],
+			[
+				"arra",
+				"array1"
+			],
+			[
 				"doc",
 				"document_id"
+			],
+			[
+				"le",
+				"leader_object"
+			],
+			[
+				"documen",
+				"documentObject"
+			],
+			[
+				"el",
+				"element"
 			],
 			[
 				"In",
@@ -100,20 +136,12 @@
 				"callback"
 			],
 			[
-				"le",
-				"length"
-			],
-			[
 				"eve",
 				"event_object"
 			],
 			[
 				"user_t",
 				"user_type_string"
-			],
-			[
-				"res",
-				"result"
 			],
 			[
 				"Lectio",
@@ -360,10 +388,6 @@
 				"school_id"
 			],
 			[
-				"in",
-				"institution"
-			],
-			[
 				"ins",
 				"institution"
 			],
@@ -490,41 +514,33 @@
 			[
 				"sure",
 				"survey_id"
-			],
-			[
-				"sect",
-				"sections"
-			],
-			[
-				"title",
-				"titleGroups"
-			],
-			[
-				"ow",
-				"owner"
-			],
-			[
-				"own",
-				"ownerUser"
-			],
-			[
-				"lectio",
-				"lectiocontextcard"
-			],
-			[
-				"cont",
-				"context_card"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "api/controllers/FetchController.js",
+			"file": "api/controllers/RecieveController.js",
 			"settings":
 			{
-				"buffer_size": 621,
+				"buffer_size": 3769,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/services/AllList.js",
+			"settings":
+			{
+				"buffer_size": 1592,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/routes.js",
+			"settings":
+			{
+				"buffer_size": 2842,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -613,14 +629,18 @@
 	],
 	"file_history":
 	[
-		"/R/Institutionsregisteret-Data/api/services/AllList.js",
 		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
 		"/R/Institutionsregisteret-Data/api/services/SyncService.js",
+		"/R/Institutionsregisteret-Data/api/controllers/FetchController.js",
+		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel.js",
+		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel",
+		"/R/Institutionsregisteret-Data/config/routes.js",
+		"/R/Institutionsregisteret-Data/api/controllers/APIController.js",
+		"/R/Institutionsregisteret-Data/api/services/AllList.js",
 		"/R/Institutionsregisteret-Data/tasks/config/sync.js",
 		"/R/Institutionsregisteret-Data/node_modules/grunt-sync/sync.json",
 		"/R/Institutionsregisteret-Data/config/session.js",
 		"/R/Institutionsregisteret-Data/package.json",
-		"/R/Institutionsregisteret-Data/config/routes.js",
 		"/R/Institutionsregisteret-Data/config/models.js",
 		"/R/Unical/config/routes.js",
 		"/R/Unical/api/controllers/LectioController.js",
@@ -736,11 +756,7 @@
 		"/R/LectioAPI/scrapers/field_of_studies.py",
 		"/R/LectioAPI/scrapers/groups.py",
 		"/R/LectioAPI/scrapers/rooms.py",
-		"/R/LectioAPI/scrapers/ressources.py",
-		"/R/LectioAPI/scrapers/subjects.py",
-		"/R/LectioAPI/importers/importSubjects.py",
-		"/R/LectioAPI/importers/importSubjectList.py",
-		"/R/LectioAPI/importers/importXPRSSubjects.py"
+		"/R/LectioAPI/scrapers/ressources.py"
 	],
 	"find":
 	{
@@ -770,6 +786,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"letter",
+			"\"",
+			"		\n",
+			"InstitutionModel",
+			"APIController",
 			"{document_id : document_id}",
 			"document_id",
 			"document",
@@ -892,12 +913,7 @@
 			"unicode(elements[len(elements)-1].text)",
 			"+offset",
 			"decom",
-			"dec",
-			"modules",
-			"yearGroups",
-			"calculatedGroups",
-			"periodeGroups",
-			"calculatedGroups"
+			"dec"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1044,30 +1060,90 @@
 			[
 				{
 					"buffer": 0,
-					"file": "api/controllers/FetchController.js",
+					"file": "api/controllers/RecieveController.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 621,
+						"buffer_size": 3769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								613,
-								613
+								2400,
+								2400
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 360.0,
+						"translation.x": 0.0,
+						"translation.y": 1375.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "api/services/AllList.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2842,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2639,
+								2639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 681.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1677,7 +1753,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 342.0,
 	"status_bar_visible": true,
 	"template_settings":

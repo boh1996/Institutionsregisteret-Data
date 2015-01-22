@@ -58,7 +58,5 @@ module.exports = {
 				InstituteService.get(id);
 			}
 		} );
-
-		console.log(count);
 	}
 }
