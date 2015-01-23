@@ -141,7 +141,7 @@ module.exports = {
 			} 
 		} else if ( req.param("start") != undefined ) {
 			if ( req.param("start") == "other" ) {
-				search = { name : new RegExp('^([0-9]).*') }
+				search = { name : new RegExp('^([0-9]).*') };
 			} else {
 				search = {$or : [{name: new RegExp('^'+ req.param("start").toUpperCase())},{name: new RegExp('^' + req.param("start").toLowerCase())}]};
 			}

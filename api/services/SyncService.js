@@ -29,7 +29,15 @@ module.exports = {
 					} );
 				}
 			} else {
-				model.create(data).exec( function createCB () {});
+				/*console.log(data);
+				model.create(data).exec( function createCB () {});*/
+				model.native( function ( err, collection ) {
+					collection.update(query, { "$set" : data, "$setOnInsert" : {"createdAt" : new Date(),"updateAt" : new Date()}}, { upsert: true}, function ( err ) {
+						if ( err != null ) {
+							console.log(err);
+						}
+					});
+				} );
 			}
 		} );
 	}

@@ -36,6 +36,7 @@ module.exports.routes = {
     view: 'homepage'
   },
   'get /fetch/all_list' : 'FetchController.all_list',
+  'get /fetch/start/:start/:end' : 'FetchController.fetch_start',
   'get r|^/fetch/([0-9a-fA-F]{32})|document_id' : 'FetchController.fetch_one',
 
   'get /search' : 'RecieveController.search',

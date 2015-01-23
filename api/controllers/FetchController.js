@@ -24,10 +24,10 @@ var ranges = {
 	"W" : "X",
 	"X" : "Y",
 	"Y" : "Z",
-	"Z" : "%C6",
-	"%C6" : "%D8",
-	"%D8" : "%C5",
-	"%C5" : "",
+	"Z" : "Æ",
+	"Æ" : "Ø",
+	"Ø" : "Å",
+	"Å" : "",
 	"1" : "9" 
 };
 
@@ -49,5 +49,13 @@ module.exports = {
 		InstituteService.get(params.document_id);
 
 		res.send("Done!");
-	}
+	},
+
+	fetch_start : function ( req, res ) {
+		var params = req.params;
+
+		AllList.get(params.start, params.end);
+
+		res.send("Working on it!");
+	},
 }

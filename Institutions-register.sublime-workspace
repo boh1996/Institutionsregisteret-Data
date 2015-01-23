@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"insti",
+				"institutions"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
 				"ser",
 				"search"
 			],
@@ -30,10 +38,6 @@
 			[
 				"doc",
 				"document_id"
-			],
-			[
-				"le",
-				"leader_object"
 			],
 			[
 				"documen",
@@ -510,10 +514,6 @@
 			[
 				"infoE",
 				"infoElements"
-			],
-			[
-				"sure",
-				"survey_id"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "api/controllers/RecieveController.js",
 			"settings":
 			{
-				"buffer_size": 3769,
+				"buffer_size": 4722,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "api/services/AllList.js",
 			"settings":
 			{
-				"buffer_size": 1592,
+				"buffer_size": 1569,
 				"line_ending": "Windows"
 			}
 		},
@@ -786,6 +786,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[]",
 			"letter",
 			"\"",
 			"		\n",
@@ -912,8 +913,7 @@
 			"startYear",
 			"unicode(elements[len(elements)-1].text)",
 			"+offset",
-			"decom",
-			"dec"
+			"decom"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1064,15 +1064,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3769,
+						"buffer_size": 4722,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2400,
-								2400
+								2364,
+								2364
 							]
 						],
 						"settings":
@@ -1081,7 +1081,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1375.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1090,18 +1090,18 @@
 				{
 					"buffer": 1,
 					"file": "api/services/AllList.js",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1592,
+						"buffer_size": 1569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								501,
-								574
+								1564,
+								1564
 							]
 						],
 						"settings":
@@ -1113,7 +1113,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1140,10 +1140,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 681.0,
+						"translation.y": 500.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
