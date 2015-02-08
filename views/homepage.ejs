@@ -1,3 +1,4 @@
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <div class="navbar-wrapper">
 	<div class="container">
 
@@ -39,7 +40,7 @@
 					<h1>Retrieve a <b>document</b> in many ways!</h1>
 					<p>
 						Request documents using <code>&lt;document_id&gt;</code>, <code>&lt;object_id&gt;</code> or <code>&lt;institute_id&gt;</code>,
-						and recieve the ouput in either <i>JSON</i>, <i>XML</i> or <i>CSV</i>.
+						and recieve the ouput in <i>JSON</i>.
 					</p>
 					<p><a class="btn btn-lg btn-primary" href="#retrieve" role="button">Learn more!</a></p>
 				</div>
@@ -90,9 +91,10 @@
 
 		<div class="col-lg-4">
 			<img class="img-circle" src="/images/Object1.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			<h2>Heading</h2>
-			<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			<h2>Structured JSON</h2>
+			<p>The documents are served in JSON, formated - with the result or results in either <code>result</code> or <code>results</code>.
+			Besides that is a error code in <code>code</code>, an error message in <code>error</code> and the max result count in <code>result_count</code>.</p>
+			<p><a class="btn btn-default" href="#example" role="button">View details &raquo;</a></p>
 		</div>
 
 		<div class="col-lg-4">
@@ -116,9 +118,51 @@
 			<code>/get/&lt;institute_id&gt;</code> - Retrieve a document by its short instituion id, this is the most common.<br>
 
 			<h2>Search</h2>
-			The API has to different 
+			<p>The API has two different endpoints, <code>/search?q=&lt;query&gt;&fields=&lt;fields&gt;</code>, the fields is a comma seperated list of fields - see the list below for more information.</p>
+			<p>The other endpoint is <code>/find</code>, this endpoint can be used with <code>&start=&lt;start_letter(s)&gt;</code> to find names starting with or with <code>&q=&lt;query&gt;</code> to search using MongoDB syntax, note _id is called id here.</p>
 
-			<p></p>
+
+			<p>Use <code>&limit</code> and <code>&offset</code> to paginate the results.</p>
+		</div>
+	</div>
+
+	<div class="row" id="example">
+		<div class="col-lg-10 col-lg-offset-1">
+			<h1>Example document!</h1>
+			<div>
+				<pre class="prettyprint lang-js" style="border:0px;">
+{
+    result: {
+        document_id: "31341D29D346B3DBC12579220001868D",
+        institute_id: "280276",
+        name: "10. kl. Erhverv - UddannelsesCenter Odsherred",
+        leader: {
+            name: "Frank Tonsberg"
+        },
+        address: "Absalonsvej 20",
+        location: {
+            zip: "4300",
+            city: "Holbæk",
+            zip_city_text: "4300 Holbæk"
+        },
+        telephone: "59455100",
+        email: "eucnvs@eucnvs.dk",
+        website: "www.eucnvs.dk",
+        parent: {
+            institute_id: "315412",
+            name: "EUC Nordvestsjælland"
+        },
+        institute_type: "Grundskoler m.v. / Folkeskoler",
+        createdAt: "2015-01-23T18:22:30.306Z",
+        updateAt: "2015-01-23T18:22:30.306Z",
+        id: "54c29166aa5cc41e0859bb07"
+    },
+    code: 200,
+    error: null,
+    result_count: 1
+}
+				</pre>
+			</div>
 		</div>
 	</div>
 	
