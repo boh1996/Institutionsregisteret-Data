@@ -10,6 +10,8 @@
  */
 module.exports.globals = {
 
+  service_url : "http://127.0.0.1:1337/",
+
   /****************************************************************************
   *                                                                           *
   * Expose the lodash installed in Sails core as a global variable. If this   *

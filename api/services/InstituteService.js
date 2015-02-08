@@ -34,7 +34,6 @@ module.exports = {
 		var mapping = {
 			"Institutionsnr." : "institute_id",
 			"Navn" : "name",
-			"Adresse" : "address",
 			"Telefon" : "telephone",
 			"E-mail" : "email",
 			"Webadresse" : "website",
@@ -44,6 +43,8 @@ module.exports = {
 			"document_id" : document_id
 		};
 		var divideRegex = regex(/(:<first>[0-9]*) (:<second>.*)/g);
+
+		documentObject["location"] = {};
 
 		$("table tr").each( function ( index, element ) {
 			element = $(element);
@@ -62,6 +63,8 @@ module.exports = {
 				} else {
 					documentObject[key] = value;
 				}
+			} else if ( key == "Adresse" ) {
+				documentObject["location"]["address"] = value;
 			} else if ( key == "Postnr. og by" ) {
 				var matches = divideRegex.exec(value);
 
@@ -69,7 +72,7 @@ module.exports = {
 					matches = divideRegex.exec(value);
 				}
 
-				documentObject["location"] = {};
+				
 
 				if ( matches != null ) {
 					documentObject["location"]["zip"] = matches.capture("first");

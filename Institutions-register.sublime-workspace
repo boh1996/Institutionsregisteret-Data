@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"create",
+				"createCB"
+			],
+			[
+				"fet",
+				"fetch_start"
+			],
+			[
+				"star",
+				"start_key"
+			],
+			[
+				"Inst",
+				"InstitutionModel"
+			],
+			[
 				"insti",
 				"institutions"
 			],
@@ -58,10 +74,6 @@
 			[
 				"m",
 				"matches"
-			],
-			[
-				"Inst",
-				"InstituteService"
 			],
 			[
 				"va",
@@ -502,45 +514,25 @@
 			[
 				"surv",
 				"survey_id"
-			],
-			[
-				"inf",
-				"information"
-			],
-			[
-				"inm",
-				"informationTables"
-			],
-			[
-				"infoE",
-				"infoElements"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "views/homepage.ejs",
+			"settings":
+			{
+				"buffer_size": 5014,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "api/controllers/RecieveController.js",
 			"settings":
 			{
-				"buffer_size": 4722,
+				"buffer_size": 4723,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/services/AllList.js",
-			"settings":
-			{
-				"buffer_size": 1569,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/routes.js",
-			"settings":
-			{
-				"buffer_size": 2842,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -606,6 +598,7 @@
 		"height": 132.0,
 		"history":
 		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -623,20 +616,28 @@
 		"/R/Institutionsregisteret-Data",
 		"/R/Institutionsregisteret-Data/api",
 		"/R/Institutionsregisteret-Data/api/controllers",
-		"/R/Institutionsregisteret-Data/api/models",
+		"/R/Institutionsregisteret-Data/api/responses",
 		"/R/Institutionsregisteret-Data/api/services",
-		"/R/Institutionsregisteret-Data/config"
+		"/R/Institutionsregisteret-Data/views"
 	],
 	"file_history":
 	[
-		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
+		"/R/Institutionsregisteret-Data/api/services/AllList.js",
 		"/R/Institutionsregisteret-Data/api/services/SyncService.js",
+		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
+		"/E/data/uvmXml.xml",
+		"/E/index.html",
+		"/R/Institutionsregisteret-Data/views/layout.ejs",
+		"/R/Institutionsregisteret-Data/config/routes.js",
+		"/R/Institutionsregisteret-Data/config/globals.js",
+		"/R/Institutionsregisteret-Data/config/i18n.js",
+		"/C/Users/Bo/Desktop/bootstrap-3.3.2-dist/bootstrap-3.3.2-dist/js/npm.js",
 		"/R/Institutionsregisteret-Data/api/controllers/FetchController.js",
+		"/R/Institutionsregisteret-Data/api/controllers/RecieveController.js",
+		"/C/Users/Bo/Desktop/Contacts.vcf",
 		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel.js",
 		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel",
-		"/R/Institutionsregisteret-Data/config/routes.js",
 		"/R/Institutionsregisteret-Data/api/controllers/APIController.js",
-		"/R/Institutionsregisteret-Data/api/services/AllList.js",
 		"/R/Institutionsregisteret-Data/tasks/config/sync.js",
 		"/R/Institutionsregisteret-Data/node_modules/grunt-sync/sync.json",
 		"/R/Institutionsregisteret-Data/config/session.js",
@@ -748,19 +749,11 @@
 		"/R/LectioAPI/scrapers/urls.py",
 		"/R/LectioAPI/scrapers/asignments.py",
 		"/R/LectioAPI/importers/importTeamInfo.py",
-		"/R/LectioAPI/importers/importTeamElementInfo.py",
-		"/R/LectioAPI/importers/importEducationDescription.py",
-		"/R/LectioAPI/importers/importPhase.py",
-		"/R/LectioAPI/importers/importPrivateActivity.py",
-		"/R/LectioAPI/scrapers/subject_list.py",
-		"/R/LectioAPI/scrapers/field_of_studies.py",
-		"/R/LectioAPI/scrapers/groups.py",
-		"/R/LectioAPI/scrapers/rooms.py",
-		"/R/LectioAPI/scrapers/ressources.py"
+		"/R/LectioAPI/importers/importTeamElementInfo.py"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -786,6 +779,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"institute_id",
+			"  ",
+			"        <",
+			"<",
+			"<document_id>",
+			"myC",
+			"    ",
+			"              ",
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"            ",
+			"           ",
+			"myC",
 			"[]",
 			"letter",
 			"\"",
@@ -896,24 +906,7 @@
 			"uniqueStudent",
 			"team_id",
 			"repalace",
-			"element",
-			"team",
-			"team_id",
-			"2",
-			"changedGroups",
-			"Indl",
-			"Ind",
-			"skills",
-			"print",
-			"find_folders",
-			"folders",
-			"find_folders",
-			"match_folder",
-			"student_id",
-			"startYear",
-			"unicode(elements[len(elements)-1].text)",
-			"+offset",
-			"decom"
+			"element"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1060,28 +1053,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "api/controllers/RecieveController.js",
+					"file": "views/homepage.ejs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4722,
+						"buffer_size": 5014,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2364,
-								2364
+								3761,
+								3761
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 1534.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1089,19 +1083,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "api/services/AllList.js",
+					"file": "api/controllers/RecieveController.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1569,
+						"buffer_size": 4723,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1564,
-								1564
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1110,37 +1104,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2842,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2639,
-								2639
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 500.0,
+						"translation.y": 2460.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
