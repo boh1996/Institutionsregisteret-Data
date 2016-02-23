@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"doc",
+				"documentObject"
+			],
+			[
 				"create",
 				"createCB"
 			],
@@ -50,10 +54,6 @@
 			[
 				"arra",
 				"array1"
-			],
-			[
-				"doc",
-				"document_id"
 			],
 			[
 				"documen",
@@ -523,7 +523,7 @@
 			"file": "views/homepage.ejs",
 			"settings":
 			{
-				"buffer_size": 5014,
+				"buffer_size": 12444,
 				"line_ending": "Unix"
 			}
 		},
@@ -618,22 +618,25 @@
 		"/R/Institutionsregisteret-Data/api/controllers",
 		"/R/Institutionsregisteret-Data/api/responses",
 		"/R/Institutionsregisteret-Data/api/services",
+		"/R/Institutionsregisteret-Data/config",
 		"/R/Institutionsregisteret-Data/views"
 	],
 	"file_history":
 	[
+		"/C/Users/Bo/Downloads/SocialPensionBlanketSP249000Struktur.xsd.meta.xml",
+		"/C/Users/Bo/Downloads/prettify-small-4-Mar-2013.tar/google-code-prettify/lang-hs.js",
+		"/R/Institutionsregisteret-Data/config/routes.js",
+		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
+		"/R/Institutionsregisteret-Data/api/controllers/RecieveController.js",
+		"/R/Institutionsregisteret-Data/api/controllers/FetchController.js",
 		"/R/Institutionsregisteret-Data/api/services/AllList.js",
 		"/R/Institutionsregisteret-Data/api/services/SyncService.js",
-		"/R/Institutionsregisteret-Data/api/services/InstituteService.js",
 		"/E/data/uvmXml.xml",
 		"/E/index.html",
 		"/R/Institutionsregisteret-Data/views/layout.ejs",
-		"/R/Institutionsregisteret-Data/config/routes.js",
 		"/R/Institutionsregisteret-Data/config/globals.js",
 		"/R/Institutionsregisteret-Data/config/i18n.js",
 		"/C/Users/Bo/Desktop/bootstrap-3.3.2-dist/bootstrap-3.3.2-dist/js/npm.js",
-		"/R/Institutionsregisteret-Data/api/controllers/FetchController.js",
-		"/R/Institutionsregisteret-Data/api/controllers/RecieveController.js",
 		"/C/Users/Bo/Desktop/Contacts.vcf",
 		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel.js",
 		"/R/Institutionsregisteret-Data/api/models/InstitutionTypeModel",
@@ -747,9 +750,7 @@
 		"/R/LectioAPI/scrapers/image.py",
 		"/C/Users/Bo/AppData/Local/Temp/scp18073/home/boh1996/lectio/lectio.py",
 		"/R/LectioAPI/scrapers/urls.py",
-		"/R/LectioAPI/scrapers/asignments.py",
-		"/R/LectioAPI/importers/importTeamInfo.py",
-		"/R/LectioAPI/importers/importTeamElementInfo.py"
+		"/R/LectioAPI/scrapers/asignments.py"
 	],
 	"find":
 	{
@@ -779,6 +780,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<code>",
 			"institute_id",
 			"  ",
 			"        <",
@@ -905,8 +907,7 @@
 			"elementStudent",
 			"uniqueStudent",
 			"team_id",
-			"repalace",
-			"element"
+			"repalace"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1057,15 +1058,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5014,
+						"buffer_size": 12444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3761,
-								3761
+								4199,
+								4199
 							]
 						],
 						"settings":
@@ -1075,7 +1076,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1534.0,
+						"translation.y": 1380.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1104,7 +1105,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2460.0,
+						"translation.y": 3060.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
